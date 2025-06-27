@@ -1,0 +1,17 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
+
+
+import "./index.css"; // optional, you can use Tailwind or custom styles
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      
+        <App />
+      
+    </BrowserRouter>
+  </React.StrictMode>
+);
