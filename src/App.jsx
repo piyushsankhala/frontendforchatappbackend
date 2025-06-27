@@ -10,7 +10,7 @@ import { use } from "react";
 
 
 export default function App() {
-   const [currentuser, setcurrentuser] = useState({});
+   const [currentuser, setcurrentuser] = useState(null);
    const getcurrentuser = async () => {
        try { 
          const response = await fetchWithRefresh("https://chatappbackend-fwrn.onrender.com/api/user/me", {
