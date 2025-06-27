@@ -8,7 +8,7 @@ export default function Register() {
 
   const register = async (e) => {
     e.preventDefault();
-    const res = await fetch("https://chatappbackend1122.netlify.app/register", {
+    const res = await fetch("https://chatappbackend-fwrn.onrender.com/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

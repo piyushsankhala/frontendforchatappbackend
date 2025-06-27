@@ -13,7 +13,7 @@ export default function App() {
    const [currentuser, setcurrentuser] = useState({});
    const getcurrentuser = async () => {
        try { 
-         const response = await fetchWithRefresh("https://chatappbackend1122.netlify.app/api/user/me", {
+         const response = await fetchWithRefresh("https://chatappbackend-fwrn.onrender.com/api/user/me", {
            method: "GET",
            headers: {
              "Content-Type": "application/json",

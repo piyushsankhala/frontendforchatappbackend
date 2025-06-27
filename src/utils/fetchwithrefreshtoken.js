@@ -9,7 +9,7 @@ export const fetchWithRefresh = async (url, options = {}) => {
     let res = await fetch(url, finalOptions);
 
     if (res.status === 401) {
-      const refreshRes = await fetch("http://localhost:3000/api/user/refresh", {
+      const refreshRes = await fetch("https://chatappbackend-fwrn.onrender.com/api/user/refresh", {
         method: "POST",
         credentials: "include", // important
       });
