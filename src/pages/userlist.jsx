@@ -8,7 +8,7 @@ export default function UserList() {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetchWithRefresh("http://localhost:3000/api/user/all", {
+      const res = await fetchWithRefresh("https://chatappbackend-fwrn.onrender.com/api/user/all", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
