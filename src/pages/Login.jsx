@@ -9,7 +9,7 @@ export default function Login() {
   const login = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/api/user/login", {
+      const res = await fetch("https://chatappbackend1122.netlify.app/user/login", {
         method: "POST",
         credentials: "include",
         headers: {

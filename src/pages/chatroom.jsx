@@ -11,7 +11,7 @@ export default function Chatroom() {
 
   const fetchchat = async () => {
     try {
-      const response = await fetchWithRefresh("http://localhost:3000/api/chat/acesschat", {
+      const response = await fetchWithRefresh("https://chatappbackend1122.netlify.app/api/chat/acesschat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +31,7 @@ export default function Chatroom() {
     if (!message.trim()) return;
 
     try {
-      const response = await fetchWithRefresh("http://localhost:3000/api/message/send", {
+      const response = await fetchWithRefresh("https://chatappbackend1122.netlify.app/api/message/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export default function Chatroom() {
 
   const logout = async () => {
     try {
-      const res = await fetchWithRefresh("http://localhost:3000/api/user/logout", {
+      const res = await fetchWithRefresh("https://chatappbackend1122.netlify.app/api/user/logout", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export default function Chatroom() {
 
   const getCurrentUser = async () => {
     try {
-      const response = await fetchWithRefresh("http://localhost:3000/api/user/me", {
+      const response = await fetchWithRefresh("https://chatappbackend1122.netlify.app/api/user/me", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

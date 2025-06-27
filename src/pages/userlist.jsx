@@ -8,7 +8,7 @@ export default function UserList() {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetchWithRefresh("http://localhost:3000/api/user/all", {
+      const res = await fetchWithRefresh("https://chatappbackend1122.netlify.app/user/all", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export default function UserList() {
 
   const startchat = async (userId) => {
     try {
-      const res = await fetchWithRefresh("http://localhost:3000/api/chat/createchat", {
+      const res = await fetchWithRefresh("https://chatappbackend1122.netlify.app/createchat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default function UserList() {
 
   const logout = async () => {
     try {
-      const res = await fetchWithRefresh("http://localhost:3000/api/user/logout", {
+      const res = await fetchWithRefresh("https://chatappbackend1122.netlify.app/logout", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
