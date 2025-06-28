@@ -13,6 +13,7 @@ export default function UserList() {
         headers: {
           "Content-Type": "application/json",
         },
+        Credentials: "include", // Ensure cookies are sent with the request
       });
 
       if (res.ok) {
