@@ -26,6 +26,7 @@ export default function App() {
       setcurrentuser(data.data);
       console.log("Current User:", data);
     } catch (error) {
+      setcurrentuser(null);
       console.error("Error fetching current user:", error);
     } finally {
       setLoading(false); // ✅ Always stop loading
