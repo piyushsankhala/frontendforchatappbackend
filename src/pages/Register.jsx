@@ -20,7 +20,7 @@ export default function Register() {
     if (res.status === 200) {
       alert("OTP sent successfully! Please check your email.");
       setEmail("");
-      navigate("/otp",{state: { email}});
+      navigate("/otp",{state: { email, password }});
     } else if (res.status === 400) {
       alert(data.message);
     } else {

@@ -53,7 +53,7 @@ export default function Otp() {
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-8">
                     Verify Your OTP
                 </h2>
-                <form onSubmit={verifyAndRegister} className="space-y-5">
+                
                     
                     <div>
                         <input
@@ -67,11 +67,12 @@ export default function Otp() {
                     </div>
                     <button
                         type="submit"
+                        onClick={verifyAndRegister}
                         className="w-full px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition text-white font-semibold"
                     >
                         Verify OTP
                     </button>
-                </form>
+                
             </div>
         </div>
     )
