@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import UserList from "./pages/userlist";
 import Chatroom from "./pages/chatroom";
+import Otp from "./pages/otp"; // ✅ Import Otp component
 
 export default function App() {
   const [currentuser, setcurrentuser] = useState(null);
@@ -52,6 +53,7 @@ export default function App() {
         }
       />
       <Route path="/login" element={<Login />} />
+      <Route path ="/otp" element={<Otp />} />
       <Route path="/register" element={<Register />} />
       <Route path="/users" element={<UserList />} />
       <Route path="/chat/:id" element={<Chatroom />} />

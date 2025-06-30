@@ -5,6 +5,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password , setPassword] = useState("");
   const navigate = useNavigate();
+  
 
   const register = async (e) => {
     e.preventDefault();
@@ -25,6 +26,26 @@ export default function Register() {
       alert(data.message);
     }
   };
+  const sendotp = async (e) => {
+    e.preventDefault();
+    const res = await fetch("https://chatappbackend-fwrn.onrender.com/api/otp/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+    if (res.status === 200) {
+      alert("OTP sent successfully! Please check your email.");
+      setEmail("");
+      navigate("/otp");
+    } else if (res.status === 400) {
+      alert(data.message);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-blue-200 via-white to-blue-100 px-4 sm:px-6 lg:px-8">
@@ -32,7 +53,7 @@ export default function Register() {
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-blue-800 mb-8">
           Create your account
         </h2>
-        <form onSubmit={register} className="space-y-6">
+        <form onSubmit={sendotp} className="space-y-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
               Email address
