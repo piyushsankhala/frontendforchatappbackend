@@ -54,16 +54,7 @@ export default function Otp() {
                     Verify Your OTP
                 </h2>
                 <form onSubmit={verifyAndRegister} className="space-y-5">
-                    <div>
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            value={email}
-                            required
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-5 py-3 rounded-xl bg-white/30 text-white placeholder-white/80 outline-none focus:ring-2 focus:ring-white transition"
-                        />
-                    </div>
+                    
                     <div>
                         <input
                             type="text"
