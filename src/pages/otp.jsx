@@ -27,7 +27,7 @@ export default function Otp() {
 
     if (verifyRes.ok) {
       // Step 2: Register the user after successful OTP
-      const regRes = await fetch("https://chatappbackend-fwrn.onrender.com/user/register", {
+      const regRes = await fetch("https://chatappbackend-fwrn.onrender.com/api/user/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
