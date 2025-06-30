@@ -7,25 +7,6 @@ export default function Register() {
   const navigate = useNavigate();
   
 
-  const register = async (e) => {
-    e.preventDefault();
-    const res = await fetch("https://chatappbackend-fwrn.onrender.com/user/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
-    const data = await res.json();
-    if (res.status === 201) {
-      alert("Registration successful! Please log in.");
-      setEmail("");
-      setPassword("");
-      navigate("/login");
-    } else if (res.status === 400) {
-      alert(data.message);
-    }
-  };
   const sendotp = async (e) => {
     e.preventDefault();
     const res = await fetch("https://chatappbackend-fwrn.onrender.com/api/otp/send", {
@@ -39,7 +20,7 @@ export default function Register() {
     if (res.status === 200) {
       alert("OTP sent successfully! Please check your email.");
       setEmail("");
-      navigate("/otp");
+      navigate("/otp",{state: { email}});
     } else if (res.status === 400) {
       alert(data.message);
     } else {
