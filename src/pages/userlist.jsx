@@ -26,7 +26,8 @@ export default function UserList() {
       console.error("Error fetching users:", error);
     }
   };
-  
+  console.log("Users:", users);
+
 
   useEffect(() => {
     fetchUsers();
@@ -96,7 +97,7 @@ export default function UserList() {
   >
     {user.email}
 
-    {user.messageindicator && (
+    {user.messageindicator  && (
       <span className="absolute top-2 right-4 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
     )}
   </li>
