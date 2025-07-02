@@ -88,14 +88,19 @@ export default function UserList() {
         ) : (
           <ul className="space-y-3 max-h-[400px] overflow-y-auto scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
             {users.map((user) => (
-              <li
-                key={user._id}
-                onClick={() => startchat(user._id)}
-                className="p-4 bg-white/30 rounded-xl hover:bg-white/40 cursor-pointer transition duration-200 text-white font-medium"
-              >
-                {user.email}
-              </li>
-            ))}
+  <li
+    key={user._id}
+    onClick={() => startchat(user._id)}
+    className="relative p-4 bg-white/30 rounded-xl hover:bg-white/40 cursor-pointer transition duration-200 text-white font-medium"
+  >
+    {user.email}
+
+    {user.messageindicator && (
+      <span className="absolute top-2 right-4 w-3 h-3 bg-red-500 rounded-full animate-ping"></span>
+    )}
+  </li>
+))}
+
           </ul>
         )}
       </div>
