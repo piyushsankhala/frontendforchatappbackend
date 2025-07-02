@@ -26,6 +26,7 @@ export default function UserList() {
       console.error("Error fetching users:", error);
     }
   };
+  
 
   useEffect(() => {
     fetchUsers();
