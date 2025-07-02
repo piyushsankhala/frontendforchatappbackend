@@ -28,6 +28,11 @@ export default function UserList() {
 
   useEffect(() => {
     fetchUsers();
+    const interval = setInterval(() => {
+    fetchUsers();
+  }, 3000); // every 3 seconds
+
+  return () => clearInterval(interval);
   }, []);
 
   const startchat = async (userId) => {
